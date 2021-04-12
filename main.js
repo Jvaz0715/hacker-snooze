@@ -17,7 +17,9 @@ fetch('https://hacker-news.firebaseio.com/v0/topstories.json?print=pretty')
                 .then((res) => res.json())
                 .then((data) => {
                     console.log("New data is: ");
-                    console.log(data.url);
+                    console.log("story title is: " + data.title);
+                    console.log("story url is: " + data.url);
+                    
                 })
         }
        
