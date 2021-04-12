@@ -1,4 +1,4 @@
-const testing = document.querySelector(".testing-js");
+const storiesContainer = document.querySelector(".news-stories-container");
 //declare an empty array to fill with story id's
 
 //the following will
@@ -36,7 +36,7 @@ fetch('https://hacker-news.firebaseio.com/v0/topstories.json?print=pretty')
                     newLink.href = data.url;
                     newLink.innerText = data.title;
                     newLink.appendChild(storyDate);
-                    testing.appendChild(newLink);
+                    storiesContainer.appendChild(newLink);
                 })
         }
        

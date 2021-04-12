@@ -1,4 +1,26 @@
-.testing-js {
+.banner-container {
+    position: relative; 
+    height: 40vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid green;
+}
+
+.banner-container::before {    
+    content: "";
+    background-image: url('https://miro.medium.com/max/980/1*Odj6BW8rfq-gExKp_rJrdA.png');
+    background-size: contain;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.75;
+}
+
+.news-stories-container {
     display: flex;
     flex-direction: column;
 }
