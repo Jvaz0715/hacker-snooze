@@ -12,14 +12,17 @@ fetch('https://hacker-news.firebaseio.com/v0/topstories.json?print=pretty')
         return data;
     })
     .then((storyIDs) => {
-        for(let i = 0; i < 5; i ++){
+        for(let i = 0; i < 100; i ++){
             fetch(`https://hacker-news.firebaseio.com/v0/item/${storyIDs[i]}.json?print=pretty`)
                 .then((res) => res.json())
                 .then((data) => {
                     console.log("New data is: ");
                     console.log("story title is: " + data.title);
                     console.log("story url is: " + data.url);
-                    
+                    const newLink = document.createElement("a");
+                    newLink.href = data.url;
+                    newLink.innerText = data.title;
+                    testing.appendChild(newLink);
                 })
         }
        
