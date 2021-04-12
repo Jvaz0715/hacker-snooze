@@ -20,6 +20,7 @@ fetch('https://hacker-news.firebaseio.com/v0/topstories.json?print=pretty')
                     console.log("story title is: " + data.title);
                     console.log("story url is: " + data.url);
                     const newLink = document.createElement("a");
+                    newLink.target = "_blank";
                     newLink.href = data.url;
                     newLink.innerText = data.title;
                     testing.appendChild(newLink);
