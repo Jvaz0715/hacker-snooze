@@ -12,7 +12,7 @@ fetch('https://hacker-news.firebaseio.com/v0/topstories.json?print=pretty')
         return data;
     })
     .then((storyIDs) => {
-        for(let i = 0; i < 5; i ++){
+        for(let i = 0; i < 10; i ++){
             fetch(`https://hacker-news.firebaseio.com/v0/item/${storyIDs[i]}.json?print=pretty`)
                 .then((res) => res.json())
                 .then((data) => {
@@ -20,14 +20,16 @@ fetch('https://hacker-news.firebaseio.com/v0/topstories.json?print=pretty')
                         <img class="card-img-top" src="https://images.unsplash.com/photo-1546422904-90eab23c3d7e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2104&q=80" alt="Card image cap">
                         <div class="card-body">
                             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
                         </div>
+                        
                     </div>*/
                     // creates the div that will hold the information
                     const storyDiv = document.createElement("div");
                     //now add the bootstrap classes necessary to the story div
                     storyDiv.classList.add("card");
                     //now sets the width of the story card
-                    storyDiv.style.width = "18rem";
+                    storyDiv.style.width = "12rem";
                     //now create img within storyDiv
                     const storyIMG = document.createElement("img");
                     storyIMG.src = "https://images.unsplash.com/photo-1546422904-90eab23c3d7e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2104&q=80";
@@ -43,17 +45,20 @@ fetch('https://hacker-news.firebaseio.com/v0/topstories.json?print=pretty')
                     //now creat attribute that will be the story title
                     const newLink = document.createElement("p");
                     newLink.classList.add("card-text");
-                    newLink.target = "_blank";
-                    newLink.href = data.url;
                     newLink.innerText = data.title;
+                    newLink.href = data.url;
+                    
                 
-
+            
                     //for testing, append the storyDIV to the container
-                    storiesContainer.appendChild(storyDiv)
+                    storiesContainer.appendChild(storyDiv);
                     //for testing, append the cardBody to the container
                     storyDiv.appendChild(cardBody);
                     //for testing. append the newLink to the cardBody
-                    cardBody.appendChild(newLink)
+                    cardBody.appendChild(newLink);
+
+
+
 
 
                     /*const newLink = document.createElement("a");
@@ -72,8 +77,7 @@ fetch('https://hacker-news.firebaseio.com/v0/topstories.json?print=pretty')
                     newLink.target = "_blank";
                     newLink.href = data.url;
                     newLink.innerText = data.title;
-                    newLink.appendChild(storyDate);
-                    storiesContainer.appendChild(newLink);*/
+                    newLink.appendChild(storyDate);*/
                 })
         }
        

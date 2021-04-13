@@ -72,25 +72,27 @@ html {
 
 .news-stories-container {
     border: 3px solid black;
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     margin: 20px;
-    width: 90%;
-    align-items: center;
-    justify-content: space-between;
+    margin-bottom: 50px;
+    width: 100%;
+    height: 100%;
 }
 
 .card {
-    
-    margin: 2px;
+    margin: 5px;
     display: flex;
     width: 100%;
-    height: 95%;
+    height: 90%;
     justify-content: flex-start;
-  
 }
 
 .card-text {
     text-align: center;
+}
+
+.stories-button {
+    background-color: blue;
 }
 
