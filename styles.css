@@ -73,26 +73,28 @@ html {
 .news-stories-container {
     border: 3px solid black;
     display: grid;
+    justify-content: center;
+    align-content: center;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    margin: 20px;
-    margin-bottom: 50px;
+    grid-template-rows: 20, 1fr;
+    row-gap: 20px;
+    width: 80%;
+    height: auto;
+    
+}
+
+.card {
+    
+    display: flex;
     width: 100%;
     height: 100%;
 }
 
-.card {
-    margin: 5px;
-    display: flex;
-    width: 100%;
-    height: 90%;
-    justify-content: flex-start;
-}
-
-.card-text {
+.card-text,
+a {
     text-align: center;
 }
 
-.stories-button {
-    background-color: blue;
+a {
+    border: 2px solid red;
 }
-
