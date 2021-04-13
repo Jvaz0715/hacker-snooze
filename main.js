@@ -40,10 +40,20 @@ fetch('https://hacker-news.firebaseio.com/v0/topstories.json?print=pretty')
                     // add the card-img-top class to the cardBody
                     cardBody.classList.add("card-body");
 
+                    //now creat attribute that will be the story title
+                    const newLink = document.createElement("p");
+                    newLink.classList.add("card-text");
+                    newLink.target = "_blank";
+                    newLink.href = data.url;
+                    newLink.innerText = data.title;
+                
+
                     //for testing, append the storyDIV to the container
                     storiesContainer.appendChild(storyDiv)
                     //for testing, append the cardBody to the container
                     storyDiv.appendChild(cardBody);
+                    //for testing. append the newLink to the cardBody
+                    cardBody.appendChild(newLink)
 
 
                     /*const newLink = document.createElement("a");

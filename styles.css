@@ -82,9 +82,15 @@ html {
 
 .card {
     
-    margin: 25px;
+    margin: 2px;
     display: flex;
     width: 100%;
+    height: 95%;
     justify-content: flex-start;
   
 }
+
+.card-text {
+    text-align: center;
+}
+
