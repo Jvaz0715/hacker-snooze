@@ -61,7 +61,6 @@ html {
     height: 5%;
     display: flex;
     flex-direction: row-reverse;
-    align-content: space-between;
     
 }
 
@@ -111,6 +110,13 @@ a {
     display: flex;
     justify-content: flex-start;
     margin: 20px;
+}
+
+.date-published {
+    font-size: 12px;
+    font-style: italic;
+    text-align: center;
+    color: gray;
 }
 
 
