@@ -16,7 +16,7 @@ fetch('https://hacker-news.firebaseio.com/v0/topstories.json?print=pretty')
             fetch(`https://hacker-news.firebaseio.com/v0/item/${storyIDs[i]}.json?print=pretty`)
                 .then((res) => res.json())
                 .then((data) => {
-                    /*<div class="card" style="width: 12rem;">
+                    /*<div class="card">
                         <img class="card-img-top" src="https://images.unsplash.com/photo-1546422904-90eab23c3d7e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2104&q=80" alt="Card image cap">
                         <div class="card-body">
                             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>

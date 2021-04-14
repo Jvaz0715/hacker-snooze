@@ -66,7 +66,6 @@ html {
 }
 
 .news-to-center {
-    border: 3px solid brown;
     display: flex;
     justify-content: center;
     margin: 20px;
@@ -110,4 +109,45 @@ a {
     padding: 2px;
 }
 
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 812px) 
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: portrait) {
+    .news-stories-container {
+        border: 3px solid black;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-content: center;
+        width: 100%;
+        height: auto;
+        
+    }
+    .card {
+        border: 3px solid yellow;
+        display: flex;
+        flex-direction: row;
+        width: 3rem;
+        
+    }
+
+    .card-img-top {
+        visibility: visible;
+    }
+
+    #logo-header {
+        background-color: white;
+        width: 100px;
+        height: 100px;
+        margin: 10px;
+       
+    }
+
+    #header-title {
+        font-size: 50px;
+    }
+}
 
