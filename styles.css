@@ -109,6 +109,11 @@ a {
     padding: 2px;
 }
 
+.top-stories-title {
+    display: flex;
+    justify-content: center;
+}
+
 
 /* Portrait */
 @media only screen 
@@ -148,6 +153,19 @@ a {
 
     #header-title {
         font-size: 50px;
+    }
+
+    .nav-container {
+        /*border: 3px solid pink;*/
+        width: 100%;
+        display: flex;
+        flex-direction: row-reverse;
+        
+    }
+
+    #home-button,
+    #new-button {
+        visibility: hidden;
     }
 }
 
