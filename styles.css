@@ -70,6 +70,7 @@ html {
     display: flex;
     justify-content: center;
     margin: 20px;
+    padding: 20px;
     background-color: lightgray;
 }
 
@@ -81,7 +82,8 @@ html {
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: 20, 1fr;
     row-gap: 50px;
-    width: 80%;
+    column-gap: 25px;
+    width: 70%;
     height: auto;
     
 }
