@@ -76,11 +76,11 @@ html {
 .news-stories-container {
     /*border: 3px solid black;*/
     display: grid;
-    justify-content: center;
+    justify-content: space-around;
     align-content: center;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: 20, 1fr;
-    row-gap: 20px;
+    row-gap: 50px;
     width: 80%;
     height: auto;
     

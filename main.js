@@ -29,7 +29,7 @@ fetch('https://hacker-news.firebaseio.com/v0/topstories.json?print=pretty')
                     // now add the bootstrap classes necessary to the story div
                     storyDiv.classList.add("card");
                     // now sets the width of the story card
-                    storyDiv.style.width = "12rem";
+                    storyDiv.style.width = "14rem";
                     // for testing, append the storyDIV to the container
                     storiesContainer.appendChild(storyDiv);
                     
