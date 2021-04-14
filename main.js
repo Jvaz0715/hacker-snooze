@@ -60,6 +60,20 @@ fetch('https://hacker-news.firebaseio.com/v0/topstories.json?print=pretty')
                     storyTitle.innerText = data.title;
                     //for testing. append the storyTitle to the cardBody
                     cardBody.appendChild(storyTitle);
+
+                    const storyDate = document.createElement("p");
+                    storyDate.classList.add("date-published");
+
+                    const unixTimestamp = data.time;
+
+                    const milliseconds = data.time * 1000 // 1575909015000
+
+                    const dateObject = new Date(milliseconds)
+
+                    const humanDateFormat = dateObject.toLocaleString() //2019-12-9 10:30:15
+                    storyDate.innerText = "Published: " + humanDateFormat;
+
+                    storyDiv.appendChild(storyDate);
                     
                     //now creat attribute that will be the story title
                     const storyLink = document.createElement("a");
@@ -73,6 +87,8 @@ fetch('https://hacker-news.firebaseio.com/v0/topstories.json?print=pretty')
                     storyLink.style.color= "white";
                     //for testing. append the storyLink to the cardBody
                     storyDiv.appendChild(storyLink);
+
+                    
             
                 })
         } 
@@ -80,17 +96,7 @@ fetch('https://hacker-news.firebaseio.com/v0/topstories.json?print=pretty')
 
     /*
                     
-                    const storyDate = document.createElement("p");
                     
-
-                    const unixTimestamp = data.time;
-
-                    const milliseconds = data.time * 1000 // 1575909015000
-
-                    const dateObject = new Date(milliseconds)
-
-                    const humanDateFormat = dateObject.toLocaleString() //2019-12-9 10:30:15
-                    storyDate.innerText = humanDateFormat;
 
                     newLink.target = "_blank";
                     newLink.href = data.url;

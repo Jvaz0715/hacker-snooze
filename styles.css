@@ -53,15 +53,15 @@ html {
     /*border: 3px solid green;*/
     display: flex;
     justify-content: flex-end;
-    margin-bottom: 50px;
+    margin-bottom: 10px;
 }
 
 .nav-container {
     /*border: 3px solid pink;*/
     height: 5%;
-    width: 30%;
     display: flex;
     flex-direction: row-reverse;
+    align-content: space-between;
     
 }
 
@@ -82,16 +82,14 @@ html {
     grid-template-rows: 20, 1fr;
     row-gap: 50px;
     column-gap: 25px;
-    width: 70%;
+    width: 80%;
     height: auto;
     
 }
 
 .card {
     display: flex;
-    width: 100%;
-    height: 100%;
-    
+    position: relative;
 }
 
 .card-text,
@@ -111,7 +109,8 @@ a {
 
 .top-stories-title {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
+    margin: 20px;
 }
 
 
