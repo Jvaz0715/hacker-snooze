@@ -67,7 +67,10 @@ fetch('https://hacker-news.firebaseio.com/v0/topstories.json?print=pretty')
                     storyLink.classList.add("link-to-story");
                     // make the storyLink inner text the data title information
                     storyLink.href = data.url;
+                    storyLink.target = "_blank";
                     storyLink.innerText = "Read Here";
+                    storyLink.style.textDecoration= "none";
+                    storyLink.style.color= "white";
                     //for testing. append the storyLink to the cardBody
                     storyDiv.appendChild(storyLink);
             
