@@ -88,7 +88,8 @@ html {
 
 .card {
     display: flex;
-    position: relative;
+    justify-content: center;
+    align-items: center;
 }
 
 .card-text,
@@ -101,9 +102,10 @@ a {
     background-color: #6699cc;
     text-decoration: none;
     border-radius: 5px;
-    width: 100%;
+    width: 150px;
     font-size: 16px;
     padding: 2px;
+    margin-bottom: 5px;
 }
 
 .top-stories-title {
@@ -140,7 +142,7 @@ a {
         border: 3px solid yellow;
         display: flex;
         flex-direction: row;
-        width: 3rem;
+        width: 1rem;
         
     }
 
